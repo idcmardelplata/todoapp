@@ -5,3 +5,6 @@ class Task():
 
     def title(self):
         return self._label
+
+    def status(self):
+       return self._status
