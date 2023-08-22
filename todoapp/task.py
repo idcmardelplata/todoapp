@@ -1,5 +1,5 @@
 class Task():
-    def __init__(self, label:str, status: str) -> None:
+    def __init__(self, label:str, status: str = "Pending") -> None:
         self._size_of_label(label)
         self._label = label
         self._status = status
