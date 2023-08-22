@@ -1,19 +1,16 @@
 from todoapp.task  import Task
 import pytest
 
-# que pasa si el texto es muy largo
 # ¿Puede estar repetida una tarea?
 # ¿Deberia tener un metodo para hacer un toggle entre estados?
 # ¿Deberia crear una factoria de tareas?
 # El status deberia ser un enum
-# El status deberia ser por defecto
 
 
 @pytest.fixture
 def setup():
     label = "ir a comprar puchos"
-    status = "Pending"
-    task = Task(label = label, status = status)
+    task = Task(label = label)
     return task
     
 
@@ -25,9 +22,8 @@ def test_la_tarea_puede_tener_2_estados(setup):
 
 def test_el_label_debe_tener_255_caracteres():
     label = "label" * 500
-    status = "Done"
     with pytest.raises(ValueError):
-        task = Task(label = label, status = status)
+        task = Task(label = label)
 
 def test_status_debe_ser_por_defecto():
     task = Task(label="some random content")
