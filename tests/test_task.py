@@ -28,3 +28,4 @@ def test_el_label_debe_tener_255_caracteres():
 def test_status_debe_ser_por_defecto():
     task = Task(label="some random content")
     assert task.status() == "Pending"
+    assert False
