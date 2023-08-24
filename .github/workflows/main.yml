@@ -2,7 +2,7 @@ name: CI Basico
 run-name: ${{github.actor}} esta probando el commit
 on:
   push:
-    branches: [master]
+    branches: [master, test]
   pull_request:
     types: [opened, reopened]
 
