@@ -30,4 +30,7 @@ def test_status_debe_ser_por_defecto():
     assert task.status() == "Pending"
 
 
+def test_status_debe_fallar():
+    task = Task(label="some random content")
+    assert False
 
