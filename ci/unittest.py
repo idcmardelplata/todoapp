@@ -12,6 +12,7 @@ async def main():
                 .with_workdir("/src")
                 .with_exec(["pip3", "install", "poetry"])
                 .with_exec(["poetry", "config", "virtualenvs.create", "false"])
+                .with_exec(["poetry", "config", "cache-dir", "/root/.cache/pypoetry"])
                 .with_exec(["poetry", "install"])               
                 .with_exec(["poetry", "run", "pytest"])
                 )
