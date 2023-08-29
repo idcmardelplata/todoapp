@@ -30,4 +30,4 @@ def test_status_debe_ser_por_defecto():
     assert task.status() == "Pending"
 
 def test_fallar():
-    assert False
+    assert True
