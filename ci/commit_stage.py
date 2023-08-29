@@ -10,7 +10,7 @@ async def run(command: str):
         cache = client.cache_volume("pip")
         python = (
             client.container()
-            .from_("idcmardelplata/poetry:v02")
+            .from_("idcmardelplata/poetry:v01")
             .with_directory("/src", client.host().directory("."), exclude=["ci/"])
             .with_workdir("/src")
             .with_env_variable("POETRY_CACHE_DIR", "/src/.cache")
