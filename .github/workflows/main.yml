@@ -28,4 +28,4 @@ jobs:
       #------------------------#
       - name: Run unit tests
         run: |
-          poetry run ci/commit_stage.py
+          poetry run python ci/commit_stage.py
