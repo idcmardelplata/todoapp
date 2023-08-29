@@ -29,3 +29,4 @@ def test_debe_hacer_toggle_entre_estados(task):
     status = task.status()
     task.toggle_task()
     assert task.status() != status
+
